@@ -7,7 +7,7 @@ Media queries helpers */
   @if ($i == 1) {
     @content;
   } @else {
-    @media (min-#{lk-bp-type}: #{$bp}) {
+    @media (min-#{$lk-bp-type}: #{$bp}) {
       @content;
     }
   }
@@ -33,7 +33,7 @@ Grid mixins */
     @if ($bp == nth(nth($lk-bps, 1), 1)) {
       #{$prop}: calc(100vw * #{$n} / #{$cols} + #{$plus});
     } @else {
-      @media (min-#{bp-type}: #{$bp}) {
+      @media (min-#{$lk-bp-type}: #{$bp}) {
         #{$prop}: calc(100vw * #{$n} / #{$cols} + #{$plus});
       }
     }

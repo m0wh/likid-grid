@@ -7,20 +7,16 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  h1, h2, p {
-    @include likid(font-size, 0.25);
-    line-height: 1em;
-    text-transform: uppercase;
-    margin: 0;
+[class^=likid] {
+  @include likid(font-size, 0.5);
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0;
 
-    &.big { @include likid(font-size, 1); }
+  .line {
+    display: block;
 
-    .line {
-      display: block;
-      
-      &.right { text-align: right; }
-      &.center { text-align: center; }
-    }
+    &.right { text-align: right; }
+    &.center { text-align: center; }
   }
 }

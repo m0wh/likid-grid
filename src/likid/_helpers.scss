@@ -1,0 +1,42 @@
+
+/*
+Grid-overlay
+Place a #Grid div containint a few inner divs just after the opening <body> tag*/
+
+$maxGridSize: nth(nth($lk-bps, length($lk-bps)), 2);
+
+#VGrid {
+  pointer-events: none;
+
+  > div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #f005;
+
+    @for $i from 1 through $maxGridSize {
+      &:nth-of-type(#{$i}) {
+        @include likid(left, $i);
+      }
+    }
+  }
+}
+
+#HGrid {
+  pointer-events: none;
+
+  > div {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #f005;
+
+    @for $i from 1 through $maxGridSize {
+      &:nth-of-type(#{$i}) {
+        @include likid(top, $i);
+      }
+    }
+  }
+}

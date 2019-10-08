@@ -1,0 +1,17 @@
+{
+  "name": "likid-grid",
+  "version": "1.0.0",
+  "description": "Likid (name will probably change) is a grid system designed to force consistency.",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url . -d docs"
+  },
+  "repository": "git@github.com:m0wh/likid-grid.git",
+  "author": "Malo Widerspach <malo@rezo-zero.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.0"
+  }
+}

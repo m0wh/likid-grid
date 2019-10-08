@@ -1,0 +1,9 @@
+$lk-bp-type: 'aspect-ratio';
+
+/* set the minimum value of the breakpoint type
+   and the number of columns associated to it: */
+$lk-bps: (
+  '1/2' 8,
+  '3/4' 16,
+  '3/2' 24
+);
